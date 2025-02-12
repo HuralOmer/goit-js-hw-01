@@ -1,15 +1,11 @@
 function makeTransaction(quantity, pricePerDroid) {
+  let totalPrice=quantity*pricePerDroid;
   if (quantity > 1) {
-    console.log(
-      "You ordered " + quantity + " droids worth " + pricePerDroid + "credits!"
-    );
+   return `"You ordered ${quantity} droids worth ${totalPrice} credits!`
   } else {
-    console.log(
-      "You ordered " + quantity + " droid worth " + pricePerDroid + "credits!"
-    );
+    return `"You ordered ${quantity} droid worth ${totalPrice} credits!`
   }
 }
-makeTransaction(5, 3000);
-makeTransaction(3, 1000);
-makeTransaction(10, 500);
-makeTransaction(1, 100);
+console.log(makeTransaction(5, 3000));
+console.log(makeTransaction(3, 1000));
+console.log(makeTransaction(10, 500));
